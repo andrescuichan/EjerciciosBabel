@@ -1,0 +1,33 @@
+body{
+    background-color: #19615A; 
+    margin: 0;
+}
+.MyDiv1{
+    text-align: center; 
+    background-color: #34C7B8;
+}
+.MyDiv2{
+    background-color: #3EEDDC; 
+    height: 350px;
+}
+.caja2_1{
+    text-align: center; 
+    width: 100%; 
+    height: 20%;
+    display: inline-block;
+}
+.caja2_2{
+    text-align: center; 
+    width: 100%; 
+    height: 80%;
+    display: inline-block;
+}
+.caja2_2_1{
+    width: 70%;  
+    height: 100%; 
+    margin: auto;
+}
+.caja_input_calculadora{
+    width: 33.3%;
+    float:left
+}

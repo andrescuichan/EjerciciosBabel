@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="06_CSS.css">
+    <title>Ejercicio 6</title>
+    <script>
+
+        Lista_array = []
+
+        function add_numero_array(){
+
+            if(numero_input.value == ""){
+                numero_input.value = 0
+                Linea_texto.innerHTML = "Los vacios se tomaran como 0s. Gracias"
+            }
+            Lista_array.push(numero_input.value)
+            Lista_array_html.innerHTML = Lista_array 
+            numero_input.value = ""
+        }
+
+        function numero_random(){
+            var numero_random = Math.round(Math.random() * (Lista_array.length -1))
+            Linea_texto.innerHTML = "El numero random es: " + Lista_array[numero_random]
+        }
+
+        function operacion_calculadora(operador){
+            var resultado;
+            var numero1 = parseInt(numero1_input_calculadora.value)
+            var numero2 = parseInt(numero2_input_calculadora.value)
+
+            if(operador == "+"){
+                resultado = numero1 + numero2
+            }else if(operador == "-"){
+                resultado = numero1  - numero2
+            }else if(operador == "*"){
+                resultado = numero1  * numero2
+            }else{
+                resultado = numero1  / numero2
+            }
+            resultado_input.value = resultado
+        }
+
+    </script>
+</head>
+<body>
+    <div class="MyDiv1">
+        <h1>Add n&uacute;meros</h1>
+        <h2 id="Lista_array_html">Lista Array</h2>
+        <h3 id="Linea_texto"> </h3>
+        Introduce un n&uacute;mero: <input id="numero_input" type="number" /> 
+        <br/>
+        <br/>
+        <button onclick="add_numero_array()">Add el n&uacute;mero al array</button>
+        <button onclick="numero_random()">Sacar un n&uacute;mero random del array</button>
+        <br/>
+        <br/>
+    </div>
+    <div class="MyDiv2">
+        <div class="caja2_1">
+            <h1>Calculadora</h1>
+            <br/>
+        </div>
+        <div class="caja2_2">
+            <div class="caja2_2_1">
+                <div class="caja_input_calculadora">
+                    Introduce un n&uacute;mero 1: <input id="numero1_input_calculadora" type="number" /> 
+                    <br/>
+                    <br/>
+                    Introduce un n&uacute;mero 2: <input id="numero2_input_calculadora" type="number" /> 
+                </div>
+                <div class="caja_input_calculadora">
+                    <button value="+" onclick="operacion_calculadora(value)">SUMAR + </button> <br/>
+                    <br/>
+                    <button value="-" onclick="operacion_calculadora(value)">RESTAR - </button> <br/>
+                    <br/>
+                    <button value="/" onclick="operacion_calculadora(value)">DIVIDIR / </button> <br/>
+                    <br/>
+                    <button value="*" onclick="operacion_calculadora(value)">MULTIPLICAR * </button> <br/>
+                </div>
+                <div class="caja_input_calculadora">
+                    Resultado:  <input id="resultado_input" type="text" /> 
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+ </body>
+</html>
