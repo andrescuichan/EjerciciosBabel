@@ -1,0 +1,15 @@
+<h1>Calculadora con Angular</h1>
+<h3> Introduce un numero</h3> <input [(ngModel)]="numeroInput" type="number"/> <br>
+<h3> Introduce otro numero</h3>  <input [(ngModel)]="numeroInput2" type="number"/> <br>
+<br>
+<br>
+<button (click)="calcularOperacion('+')"> <h2> Sumar +</h2></button>
+<button (click)="calcularOperacion('-')"><h2>Restar -</h2></button>
+<button (click)="calcularOperacion('*')"><h2>Multiplicar *</h2></button>
+<button (click)="calcularOperacion('/')"><h2>Dividir /</h2></button>
+<br>
+<br>
+<h1> Resultado: {{resultado}} </h1>
+<br>
+<br>
+
