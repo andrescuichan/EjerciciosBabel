@@ -1,0 +1,45 @@
+main{
+    width: 100%; 
+    height: 600px;
+}
+.cajaBotones{
+    width: 25%; 
+    height: 100%; 
+    background-color: #5EFFC4; 
+    float: left;
+    text-align: center;
+}
+.cajaFormulario{
+    width: 50%; 
+    height: 100%; 
+    float: left;
+}
+.apartadoFormulario{
+    width: 100%; 
+    height: 25%;
+    float: left; 
+    text-align: center;
+}
+.cajaTabla{
+    width: 25%; 
+    height: 100%; 
+    background-color: rgba(126, 102, 212, 0.973); 
+    float: left;
+}
+table{
+    margin:auto; 
+    font-size: 19px;
+}
+tbody{
+    text-align: center;
+}
+
+.rojo{
+    color: rgb(252, 89, 89);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+th{
+    padding: 6px;
+}

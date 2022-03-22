@@ -1,0 +1,72 @@
+
+<main>
+    <section class ="cajaBotones">
+        <br><br>
+        <br><button (click)="insertarVideojuego()" [disabled]="insertarDeshabilitado" style="width:80%"> <h1> Insertar</h1> </button><br>
+        <br><button (click)="modificarVideojuego()" [disabled]="modificarDeshabilitado" style="width:80%"> <h1>Modificar</h1> </button><br>
+        <br><button (click)="eliminarVideojuego()" [disabled]="eliminarDeshabilitado" style="width:80%"> <h1>Eliminar</h1> </button><br>
+        <br><button (click)="vaciarFormularios()" [disabled]="vaciarDeshabilitado" style="width:80%"> <h1>Vaciar  </h1> </button>    
+    </section>
+    <section class ="cajaFormulario">
+        <article class="apartadoFormulario" style="background-color:#5E8DFF;">
+            <label for="id"><h2>ID</h2></label>
+            <div>
+                
+                <input id="id" disabled="disabled" value="{{id==0 ? '':id}}"/>
+            </div>
+        </article>
+        <article  class="apartadoFormulario" style="background-color: #56A7E8">
+            <label for="titulo"><h2>T&iacute;tulo</h2></label>
+            <div>
+                
+                <input id="titulo" [(ngModel)]="titulo"/>
+                <p class="rojo" [hidden]="tituloObligatorioOculto"> El t&iacute;tulo es obligatorio</p>
+            </div>
+        </article>
+        <article  class="apartadoFormulario" style="background-color: #6BE4FF">
+            <label for="empresa"><h2>Empresa</h2></label>
+            <div>
+                
+                <input id="empresa" [(ngModel)]="empresa"/>
+                <p class="rojo" [hidden]="empresaObligatorioOculto"> El empresa es obligatorio</p>
+            </div> 
+        </article>
+        <article  class="apartadoFormulario" style="background-color: #56E8DB;">
+            <label for="media"><h2>Puntuaci&oacute;n media (solo n&uacute;meros)</h2></label>
+            <div>
+                
+                <input id="media" [(ngModel)]="media"/>
+                <p class="rojo" [hidden]="mediaObligatorioOculto"> {{textoVariable}}</p>
+            </div> 
+        </article>
+    </section>
+    <section class="cajaTabla">
+        <br><br>
+        <br><br>
+        <table>    
+            <thead>
+                <tr >
+                    <th><h3>ID</h3> </th>
+                    <th> <h3>T&iacute;tulo</h3> </th>
+                    <th> <h3>Empresa</h3> </th>
+                    <th> <h3>Puntuaci&oacute;n</h3> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let games of listaVideojuegos" (click)="seleccionar(games)">
+                    <td>{{ games.id }}</td>
+                    <td>{{ games.titulo }}</td>
+                    <td>{{ games.empresa }}</td>
+                    <td>{{ games.media }}</td>
+                </tr>
+                <tr *ngIf="listaVideojuegos.length==0" >
+                    <td class="rojo" colspan="4">
+                        No se han encontrado videojuegos
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+    </section>
+</main>
+
+
