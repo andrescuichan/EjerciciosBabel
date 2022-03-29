@@ -1,0 +1,20 @@
+
+<div class="myDiv_0">
+    <div class="caja_0">
+       <h1 class="tituloMenu">MEN&Uacute; DE P&Aacute;GINAS </h1>
+    </div>
+    <div class="caja_1">
+        <button class="botonesMenu" (click)="BotonMenu('/login')" *ngIf="!loginDeshabilitado; else botonLoginDesactivado"> 
+            <h2> Login</h2> 
+        </button>
+        <ng-template #botonLoginDesactivado>
+            <button class="botonesMenuDesactivado" (click)="BotonMenu('/login')" [disabled]="loginDeshabilitado"> 
+                <h2> Login</h2> 
+            </button>
+        </ng-template>
+        <button class="botonesMenu" (click)="BotonMenu('/contactme')"> <h2> Contact Me</h2> 
+        </button>
+        <button class="botonesMenu" (click)="BotonMenu('/aboutme')"> <h2> About Me</h2> </button>
+    </div>
+</div>
+

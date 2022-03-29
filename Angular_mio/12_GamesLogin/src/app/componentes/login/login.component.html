@@ -1,0 +1,48 @@
+
+<main>
+    <table >
+        <tbody>
+            <tr>
+                <td class="cuadrado_11" >
+                    <label for="usuario"><h1 class="titulos" >Usuario</h1></label>
+                    <div>         
+                        <input id="usuario" [(ngModel)]="usuario"/>
+                    </div>
+                    <h3 class="textoObligatorio" [hidden]="usuarioObligatorioOculto">El usuario es obligatorio</h3>
+                </td>
+                <td class="cuadrado_12" colspan="2" >
+                    <h1 class="textoEstadoUsuario" [hidden]="estadoUsuariooOculto"> {{estadoUsuario}} </h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="cuadrado_21" >
+                    <label for="password"><h1 class="titulos" >Password</h1></label>
+                    <div>         
+                        <input id="password" type="password" [(ngModel)]="password"/>
+                    </div>
+                    <h3 class="textoObligatorio" [hidden]="passwordObligatorioOculto">El passwrod es obligatorio</h3>
+                </td>
+                <td class="cuadrado_22">
+                    <br><button class="botonIniciarSesion" (click)="iniciarSesion()"> <h2> Iniciar Sesion</h2> </button><br>
+                </td>
+                <td class="cuadrado_23">
+                    <h1 class="titulos" >WELCOME</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="cuadrado_31"></td>
+                <td class="cuadrado_32"></td>
+                <td class="cuadrado_33">
+                    <h1 class="titulos" >P&aacute;gina Principal</h1>
+                </td>
+            </tr>
+    </table>
+</main>
+
+
+
+
+
+
+
+

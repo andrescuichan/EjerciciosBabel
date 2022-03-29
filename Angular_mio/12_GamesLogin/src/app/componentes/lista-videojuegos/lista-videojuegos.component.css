@@ -1,0 +1,90 @@
+main{
+    width: 100%;
+    height: 750px
+}
+
+table{
+    border-collapse: collapse; 
+    margin: auto;
+    width: 70%;
+    height: 100%;
+}
+
+tbody{
+    border: 5px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+tr{
+    height: 33.33%; 
+    width: 33.33%;
+}
+
+td{
+    height: 33.33%; 
+    width: 33.33%;
+}
+
+.cuadrado_11{
+    background-color: #196DA8;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.cuadrado_21{
+    background-color: #1DDB69;
+    border-right: 5px solid rgb(255, 255, 255);
+}
+.cuadrado_22{
+    background-color: #05A8A3;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.cuadrado_23{
+    background-color: #00F5B6;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.cuadrado_31{
+    background-color: #1DDB69;
+    border-right: 5px solid rgb(255, 255, 255);
+    padding-left: 30px;
+    text-align: justify;
+}
+.cuadrado_32{
+    background-color:#00F5B6;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.cuadrado_33{
+    background-color:#05A8A3;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.titulos_games{
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    color:rgb(255, 255, 255); 
+}
+.titulos_id{
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    color: rgb(0, 0, 0);
+}
+.detallestitulos{
+    color: black;
+}
+.datallesJuego{
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+    color:rgb(110, 79, 151);
+}
+
+.tituloPrincipal{
+    text-shadow: 6px 6px 3px rgba(174, 0, 255, 0.925);
+    font-weight: 600;
+    font-size:  4.5rem;
+    line-height: 0.5;
+    color:rgb(51, 255, 255); 
+    font-family: Roboto,sans-serif;
+    font-style: oblique;     
+}

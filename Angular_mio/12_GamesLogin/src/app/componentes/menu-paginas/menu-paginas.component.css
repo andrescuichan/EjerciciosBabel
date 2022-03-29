@@ -1,0 +1,47 @@
+.myDiv_0{
+	width: 100%; 
+    height: 90px; 
+    background-color:#2E36A8;
+}
+.caja_0{
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+.caja_1{
+    width: 55%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.botonesMenu{
+    border: 5px solid white;
+    background: transparent;
+    width: 22%;
+    margin: 8px;
+    border-radius: 28px;
+    font-family: Arial;
+    color: white;
+}
+.botonesMenu:hover {
+    background-color: #3b9ab9;
+}
+
+.botonesMenuDesactivado{
+    border: 5px solid rgb(119, 116, 116);
+    background: transparent;
+    width: 22%;
+    margin: 8px;
+    border-radius: 28px;
+    font-family: Arial;
+    color: rgb(119, 116, 116);
+}
+
+.tituloMenu{
+    font-weight: 700;
+    color: white;
+    font-family: Roboto,sans-serif;
+    font-style: oblique;
+    font-size:  2.5rem;
+}
