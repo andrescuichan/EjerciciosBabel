@@ -1,0 +1,90 @@
+main{
+    width: 100%;
+    height: 750px
+}
+
+table{
+    border-collapse: collapse; 
+    margin: auto;
+    width: 70%;
+    height: 100%;
+}
+
+tbody{
+    border: 5px solid rgb(255, 255, 255);
+}
+
+tr{
+    height: 33.33%; 
+    text-align: center;
+}
+
+td{
+    width: 33.33%; 
+}
+
+.cuadrado_11{
+    background-color: #7F00E0;
+    border-bottom: 5px solid rgb(255, 255, 255);
+
+}
+.cuadrado_12{
+    background-color: #7F00E0;
+    border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+.cuadrado_21{
+    background-color: #3D07F0;
+    border: 5px solid rgb(255, 255, 255);
+    padding: 30px
+}
+
+.cuadrado_31{
+    background-color: #6B0CFA;
+    text-align: left;
+    padding: 20px
+}
+.cuadrado_32{
+    background-color: #6B0CFA;
+    text-align: left;
+    padding: 20px
+}
+.cuadrado_33{
+    background-color: #6B0CFA;
+    text-align: left;
+    padding: 20px
+}
+
+.tituloPrincipal{
+    text-shadow: 6px 6px 3px rgba(174, 0, 255, 0.925);
+    font-weight: 600;
+    font-size:  2.3rem;
+    line-height: 0.9;
+    color:rgb(51, 255, 255); 
+    font-family: Roboto,sans-serif;
+    font-style: oblique;     
+}
+
+.textome{
+    font-size:  1.3rem;
+    line-height: 0.9;
+    color:rgb(255, 255, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
+
+.textoAficiones{
+    font-size:  1.2rem;
+    line-height: 0.9;
+    color:rgb(255, 255, 255); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.titutloAficiones{
+    font-size:  1.6rem;
+    color:rgb(0, 195, 255); 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-style: oblique;
+}

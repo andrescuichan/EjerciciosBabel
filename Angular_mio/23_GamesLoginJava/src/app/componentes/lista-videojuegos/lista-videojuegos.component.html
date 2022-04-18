@@ -1,0 +1,81 @@
+
+<main>
+    <table >
+        <tbody>
+            <tr>
+                <td class="cuadrado_11" colspan="3" >
+                    <h1 class="tituloPrincipal">Lista de Videojuegos</h1>
+                    <app-titutlo-hijo [usuarioHijo]="usuario"> </app-titutlo-hijo>
+                </td>
+            </tr>
+            <tr>
+                <td class="cuadrado_21" [ngSwitch]="DetallesGame" >
+                    <p *ngSwitchCase = "'Jak and Daxter'" >
+                        <img  [src]="listaGames[0].foto" width= 60% height= 60%;>
+                    </p>
+                    <p *ngSwitchCase="'League of Legends'">
+                         <img  [src]="listaGames[1].foto" width= 60% height= 60%;>
+                    </p>
+                     <p *ngSwitchCase="'American Conquest'">
+                        <img  [src]="listaGames[2].foto" width= 60% height= 60%;>
+                    </p>
+                     <p *ngSwitchCase="'The Last of Us'">
+                         <img  [src]="listaGames[3].foto" width= 60% height= 60%;>
+                    </p>
+                </td>
+                <td (click)="clickJuego(listaGames[0].titulo)" class="cuadrado_22">
+                    <img  [src]="listaGames[0].foto" width= 40% height= 40%;><br>
+                    <span class="titulos_id"> ID: {{ listaGames[0].id }} </span> 
+                    <h2 class="titulos_games"> {{ listaGames[0].titulo }}</h2>
+                </td>
+                <td (click)="clickJuego(listaGames[1].titulo)" class="cuadrado_23">
+                    <img [src]="listaGames[1].foto" width= 40% height= 40%;><br>
+                    <span class="titulos_id"> ID: {{ listaGames[1].id }} </span> 
+                    <h2 class="titulos_games"> {{ listaGames[1].titulo }}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td class="cuadrado_31" [ngSwitch]="DetallesGame" >
+                     <h2 *ngSwitchCase = "'Jak and Daxter'" class="datallesJuego">
+                        <span class="detallestitulos"> ID:</span> {{listaGames[0].id}} <br>
+                        <span class="detallestitulos"> Titulo:</span> {{listaGames[0].titulo}}<br>
+                        <span class="detallestitulos"> Empresa:</span> {{listaGames[0].empresa}}<br>
+                        <span class="detallestitulos"> Nota Media:</span> {{listaGames[0].media}}
+                    </h2>
+                    <h2 *ngSwitchCase="'League of Legends'" class="datallesJuego">
+                        <span class="detallestitulos"> ID:</span> {{listaGames[1].id}} <br>
+                        <span class="detallestitulos"> Titulo:</span> {{listaGames[1].titulo}}<br>
+                        <span class="detallestitulos"> Empresa:</span> {{listaGames[1].empresa}}<br>
+                        <span class="detallestitulos"> Nota Media:</span> {{listaGames[1].media}}
+                    </h2>
+                    <h2 *ngSwitchCase="'American Conquest'" class="datallesJuego">
+                        <span class="detallestitulos"> ID:</span> {{listaGames[2].id}} <br>
+                        <span class="detallestitulos"> Titulo:</span> {{listaGames[2].titulo}}<br>
+                        <span class="detallestitulos"> Empresa:</span> {{listaGames[2].empresa}}<br>
+                        <span class="detallestitulos"> Nota Media:</span> {{listaGames[2].media}}
+                    </h2>
+                    <h2 *ngSwitchCase="'The Last of Us'" class="datallesJuego">
+                        <span class="detallestitulos"> ID:</span> {{listaGames[3].id}} <br>
+                        <span class="detallestitulos"> Titulo:</span> {{listaGames[3].titulo}}<br>
+                        <span class="detallestitulos"> Empresa:</span> {{listaGames[3].empresa}}<br>
+                        <span class="detallestitulos"> Nota Media:</span> {{listaGames[3].media}}
+                    </h2> 
+                </td>
+                <td (click)="clickJuego(listaGames[2].titulo)" class="cuadrado_32" >
+                    <img [src]="listaGames[2].foto" width= 40% height= 40%;><br>
+                    <span class="titulos_id"> ID: {{ listaGames[2].id }} </span> 
+                    <h2 class="titulos_games"> {{ listaGames[2].titulo }}</h2>
+                </td>
+                <td (click)="clickJuego(listaGames[3].titulo)" class="cuadrado_33">
+                    <img [src]="listaGames[3].foto" width= 40% height= 40%;><br>
+                    <span class="titulos_id"> ID: {{ listaGames[3].id }} </span> 
+                    <h2 class="titulos_games"> {{ listaGames[3].titulo }}</h2>
+                </td>
+            </tr>
+    </table>
+</main>
+
+
+
+       
+

@@ -1,0 +1,98 @@
+
+main{
+    width: 100%;
+    height: 750px
+}
+
+table{
+    border-collapse: collapse; 
+    margin: auto;
+    width: 70%;
+    height: 100%;
+}
+
+tbody{
+    border: 5px solid rgb(255, 255, 255);
+}
+
+tr{
+    height: 33.33%; 
+    text-align: center;
+}
+
+td{
+    width: 33.33%; 
+}
+
+.cuadrado_11{
+    background-color: #0B2870;
+
+}
+.cuadrado_12{
+    background-color: #618AF2;
+    border: 5px solid rgb(255, 255, 255);
+
+}
+
+.cuadrado_21{
+    background-color: #0B2870;
+
+}
+.cuadrado_22{
+    background-color: #2D4070;
+    border: 5px solid rgb(255, 255, 255);
+
+}
+
+.cuadrado_23{
+    background-color: #1956F0;
+}
+
+.cuadrado_31{
+    background-color: #1343BD;
+    border-top: 5px solid rgb(255, 255, 255);
+
+}
+.cuadrado_32{
+    background-color: #1343BD; width: 33.33%;
+}
+
+.cuadrado_33{
+    background-color: #1956F0;
+    border-left: 5px solid rgb(255, 255, 255);
+}
+
+.titulos{
+    color: white;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;  
+}
+.textoObligatorio{
+    color: red;
+    font-style: italic;
+}
+
+.botonIniciarSesion{
+    background-color: transparent;
+    color:rgb(255, 0, 157);
+    font-size: 20px;
+    font-weight: 700;
+    border: 5px solid rgb(255, 0, 0);
+    width: 80%;
+    border-radius: 28px;
+}
+
+.botonIniciarSesion:hover {
+    background-color: rgb(255, 0, 0);
+    border: 5px solid rgb(255, 0, 157);
+    color: rgb(255, 255, 255);
+}
+
+
+.textoEstadoUsuario{
+    text-shadow: 6px 6px 3px rgba(88, 1, 1, 0.925);
+    color: rgb(245, 77, 175);
+    font-weight: 600;
+    font-size:  2.5rem;
+    font-family: Montserrat, sans-serif;
+}
