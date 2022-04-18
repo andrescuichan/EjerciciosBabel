@@ -26,6 +26,7 @@ public class HttpCliente {
 		
 		Scanner sc = new Scanner(System.in);
 		boolean resultadoValidacion = false;
+		
 		boolean fin = false;
 		GestorCoche gestorCoche = new GestorCoche();
 		List<Coche> listaCoches = null;
@@ -223,6 +224,7 @@ public class HttpCliente {
 		}
 		return validacionResultado.isValidado();
 	}
+	
 	
 	
 }

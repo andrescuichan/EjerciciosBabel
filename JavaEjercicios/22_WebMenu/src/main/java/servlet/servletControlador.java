@@ -29,6 +29,9 @@ public class servletControlador extends HttpServlet {
 		GestorUsuario grUsuario = new GestorUsuario();
 		String validacion = grUsuario.usuarioValidado(usuario);
 		
+		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		response.getWriter().append(validacion);
 	}
 
