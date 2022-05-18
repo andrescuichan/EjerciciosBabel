@@ -1,0 +1,16 @@
+package dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import modelo.Alumno;
+
+public interface AlumnoDao extends JpaRepository<Alumno,Integer>{
+	
+	/* opcion1: se le da
+	@Query("select distinct(a.curso) from Alumno a")
+	List<String> findCursos();
+	*/
+}
