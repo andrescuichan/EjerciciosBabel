@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Nuevo Pedido</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+
+<script type="text/javascript">
+	function cargarProductos(){
+		var url="http://localhost:10000/sproductos/app/Productos";
+		
+		$.get(url,function(data,status){			
+			var res="";
+			//transforma texto JSON en objeto/array JSON			
+			for(var h of data){
+				res+="<option value='"+h.codigoProducto+"'>"+h.producto+"</option>";
+			}
+			
+			$("#producto").html(res);
+		});
+	}
+	function Pedir(){	
+		var url="http://localhost:10000/spedidos/app/Pedido/";
+		$("#productoInfo").html($("#producto").val());
+		$("#unidadesInfo").html($("#unidades").val());
+		
+		var datos = new Object();
+		datos.codigoProducto=$("#producto").val();
+		datos.unidades=$("#unidades").val();
+		fechaPedidoMal = new Date().getTime();
+		datos.fechaPedido= (fechaPedidoMal + 7200000);
+		console.log(JSON.stringify(datos));
+		
+		$.ajax({method:"POST",
+			    url: url,
+			    data: JSON.stringify(datos),
+			    contentType: "application/json"});
+	}
+	
+	function informacion(){
+	
+		
+	}
+	
+	
+</script>
+
+
+</head>
+<body onload="cargarProductos();">
+	<div class="container">
+		<h1>Nuevo Pedido</h1>
+		<div class="row">
+			<div class="col-sm-6" style="border:solid 1px">
+				<br/>
+				
+				<div class="form-group">
+					<label>Producto</label>
+					<select  id="producto"  class="form-control" style="width:80%">
+					</select>
+				</div>
+				
+				<div class="form-group">
+					<label>Unidades</label>
+					<input type="number" min="0" id="unidades" class="form-control" style="width:80%"/>
+				</div>
+				
+				<br/>
+				<br/>
+			</div>
+		</div>
+		
+		<h1> Datos del pedido</h1>
+		<h3> Producto: <span id="productoInfo"> </span> </h3> 
+		<h3> Unidades: <span id="unidadesInfo"> </span> </h3> 
+		
+		<br/>
+		<button onclick="Pedir()">Confirmar Pedido</button>
+		<br/><br/><br/>
+		<a href="pedidos.html">Ver Pedidos</a>
+	</div>
+	
+	
+	
+</body>
+</html>
